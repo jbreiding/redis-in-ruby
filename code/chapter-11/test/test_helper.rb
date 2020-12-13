@@ -195,6 +195,7 @@ def assert_response(expected_result, response)
       response_match = response.match(/\A:(\d+)\r\n\z/)
       assert response_match[0]
       assert_in_delta assertion_match[1].to_i, response_match[1].to_i, assertion_match[2].to_i
+      return
     end
   rescue ArgumentError
     # For cases where expected result is something not utf-8 like 0x80
