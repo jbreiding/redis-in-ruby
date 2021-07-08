@@ -1,0 +1,22 @@
+[user]
+	name = Jeremy Breiding
+	email = jbreiding@users.noreply.github.com
+[diff]
+  tool = vscode
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+  tool = vscode
+[mergetool "vscode"]
+  cmd = code --wait $MERGED[difftool]
+	prompt = false
+[core]
+	editor = code --wait
+	excludesfile = /home/vscode/.gitignore
+	pager =
+[pull]
+	ff = only
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[include]
+	path = /home/vscode/.gitalias
